@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugin.MultipleFileSelector"
+    version="0.0.1">
+    <name>MultipleFileSelector</name>
+    <description>Cordova MultipleFileSelector Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, MultipleFileSelector</keywords>
+    <js-module src="www/MultipleFileSelector.js" name="MultipleFileSelector">
+        <clobbers target="window.MultipleFileSelector" />
+    </js-module>
+    <!-- android -->
+    <platform name="android">
+        <framework src="com.droidninja:filepicker:2.1.5" />
+        <framework src="com.android.support:design:27.1.1" />
+        <framework src="com.github.bumptech.glide:glide:4.6.1" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MultipleFileSelectorPlugin">
+                <param name="android-package" value="com.phonegap.plugin.MultipleFileSelector.MultipleFileSelectorPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/MultipleFileSelectorPlugin.java" target-dir="src/com/phonegap/MultipleFileSelector/" />
+    </platform>
+</plugin>
+

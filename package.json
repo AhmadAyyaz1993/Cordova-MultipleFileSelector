@@ -1,0 +1,20 @@
+{
+    "name": "com.phonegap.plugin.MultipleFileSelector",
+    "version": "0.0.1",
+    "description": "",
+    "homepage": "",
+    "repository": {
+      "type": "",
+      "url": ""
+    },
+    "bugs": {
+      "url": ""
+    },
+    "cordova": {
+      "id": "com.phonegap.plugin.MultipleFileSelector",
+      "platforms": ["android"]
+    },
+    "keywords": ["ecosystem:cordova", "ecosystem:phonegap", "cordova-android"],
+    "author": "Joblogic",
+    "license": ""
+  }
