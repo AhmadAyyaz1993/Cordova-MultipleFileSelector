@@ -190,54 +190,6 @@ public class MultipleFileSelectorPlugin extends CordovaPlugin {
 	}
 
 
-	 private void LogException(Exception ex)
-	 {
-		if(ex != null)
-		{
-			try
-			{
-				ex.printStackTrace(logPrintWriter);
-				String data = logStringWriter.toString();
-			
-				AddErrorLogEntry(data);
-			}
-			finally 
-			{
-				Log.d(TAG, "Logged exception in file");
-			}
-		}
-	 }
-
-	private void AddErrorLogEntry(String exceptionDetails)
-	{
-		try
-		{
-			ContentValues errorLogRowValues = GetErrorLogContent(exceptionDetails);																	
-			long errorlogResult = DatabasePoolManager.getExtendedInstance().insert("ErrorLog", null, errorLogRowValues );
-			Log.d(TAG, "Response of the adding an entry for error log is " + errorlogResult);			
-		} 
-		catch (Exception ex) 
-		{
-			ex.printStackTrace();
-		}
-	}
-
-	private ContentValues GetErrorLogContent (String exceptionDetail)
-	{
-		ContentValues errorLogContent = new ContentValues();
-		try 
-		{
-			errorLogContent.put("UserId", "");
-			errorLogContent.put("Method", "Nativee Service");
-			errorLogContent.put("Parameters", "");
-			errorLogContent.put("Exception", exceptionDetail);
-			errorLogContent.put("IsActive", "1");
-		} 
-		finally 
-		{
-			
-		}      
-		return errorLogContent;
-	}
+	 
 
  }
