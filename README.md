@@ -13,6 +13,7 @@ Example Usage:
 ```js
 //for images
 window.MultipleFileSelector.MultipleFileSelector("image", 10, function (res) {
+           // you will get image URIs in response
            ...
         },
         function (err) {
@@ -23,6 +24,7 @@ window.MultipleFileSelector.MultipleFileSelector("image", 10, function (res) {
 ```js
 //for files
 window.MultipleFileSelector.MultipleFileSelector("doc", 10, function (res) {
+           // you will get file URIs in response
             ...
         },
         function (err) {
