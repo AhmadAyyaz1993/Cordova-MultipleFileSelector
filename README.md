@@ -1,4 +1,4 @@
-Multiple file selector plugin for Cordova / PhoneGap
+Multiple file selector plugin for Cordova / PhoneGap (Android)
 ======================================================
 
 ## Installation
